@@ -1,0 +1,49 @@
+
+@import "../SassyGrid";
+
+/**
+ *  Expected Output:
+ *  .row1,row2{
+ *      extend row
+ *  }
+ *
+ *  .row1 col1,
+ *  .row1 col2,
+ *  .row2 col3{
+ *       extend col6
+ *  }
+ *
+ *  .row2 col1, .row2 col2 {
+ *      extend col3
+ *  }
+ */
+
+/* 2 COLUMNS */
+.row1{
+    @include sf-grid-row();
+
+    .col1 {
+        @include sf-grid-col(6);
+    }
+
+    .col2{
+        @include sf-grid-col(6);
+    }
+}
+
+/* 3 COLUMNS */
+.row2{
+    @include sf-grid-row();
+
+    .col1 {
+        @include sf-grid-col(3);
+    }
+
+    .col2{
+        @include sf-grid-col(3);
+    }
+
+    .col3{
+        @include sf-grid-col(6);
+    }
+}

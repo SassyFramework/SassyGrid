@@ -1,0 +1,11 @@
+@mixin sf-grid-pad($padding: flex-gutter()){
+    $name: "sf-grid-pad-#{sf-strip-invalid-char($padding)}";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include pad($padding);
+        }
+    }
+
+    @include sf-use-p($name);
+}

@@ -1,0 +1,11 @@
+@mixin sf-grid-omega($query: block, $direction: default){
+    $name: "sf-grid-omega-#{$query}-#{$direction}";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include omega($query, $direction);
+        }
+    }
+
+    @include sf-use-p($name);
+}

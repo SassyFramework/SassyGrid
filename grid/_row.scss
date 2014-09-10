@@ -1,0 +1,11 @@
+@mixin sf-grid-row($display: default, $direction: $default-layout-direction){
+    $name: "sf-grid-row-#{$display}-#{$direction}";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include row($display, $direction);
+        }
+    }
+
+    @include sf-use-p($name);
+}

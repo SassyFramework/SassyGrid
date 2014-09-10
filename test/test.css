@@ -1,0 +1,46 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ *  Expected Output:
+ *  .row1,row2{
+ *      extend row
+ *  }
+ *
+ *  .row1 col1,
+ *  .row1 col2,
+ *  .row2 col3{
+ *       extend col6
+ *  }
+ *
+ *  .row2 col1, .row2 col2 {
+ *      extend col3
+ *  }
+ */
+/* 2 COLUMNS */
+.row1, .row2 {
+  display: block; }
+  .row1:after, .row2:after {
+    content: "";
+    display: table;
+    clear: both; }
+.row1 .col1, .row1 .col2, .row2 .col3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .row1 .col1:last-child, .row1 .col2:last-child, .row2 .col3:last-child {
+    margin-right: 0; }
+
+/* 3 COLUMNS */
+.row2 .col1, .row2 .col2 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .row2 .col1:last-child, .row2 .col2:last-child {
+    margin-right: 0; }
+
+/*# sourceMappingURL=test.css.map */

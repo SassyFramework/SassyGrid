@@ -1,0 +1,17 @@
+@mixin sf-grid-col($span: $columns of $container-columns, $display: block){
+    @include sf-grid-span-columns($span, $display);
+}
+
+@mixin sf-grid-span-columns($span: $columns of $container-columns, $display: block){
+    $columns: nth($span, 1);
+    $container-columns: container-span($span);
+    $name: "sf-grid-col-#{$columns}-of-#{$container-columns}-#{$display}";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include span-columns($span, $display);
+        }
+    }
+
+    @include sf-use-p($name);
+}

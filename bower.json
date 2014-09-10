@@ -1,0 +1,31 @@
+{
+  "name": "SassyGrid",
+  "version": "0.0.1",
+  "authors": [
+    "johngerome <johngerome@gmail.com>"
+  ],
+  "description": "An Optimize Responsive Grid System.",
+  "main": "_SassyGrid.scss",
+  "keywords": [
+    "sass",
+    "sassy",
+    "sassy",
+    "framework",
+    "grid",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "sassyplaceholder": "~0.0.2",
+    "sassybreakpoint": "~0.0.1",
+    "neat": "~1.6.0",
+    "bourbon": "~4.0.2"
+  }
+}

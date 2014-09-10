@@ -1,0 +1,11 @@
+@mixin sf-grid-fill-parent(){
+    $name: "sf-grid-fill-parent";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include fill-parent();
+        }
+    }
+
+    @include sf-use-p($name);
+}

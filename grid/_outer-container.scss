@@ -1,0 +1,11 @@
+@mixin sf-grid-outer-container(){
+    $name: "sf-grid-outer-container";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include outer-container();
+        }
+    }
+
+    @include sf-use-p($name);
+}

@@ -1,0 +1,32 @@
+// Strip Invalid Character. Use to create a valid placeholder name
+// -----------------------------------------------------------------------------
+// @param  String $string
+// @return String
+// -----------------------------------------------------------------------------
+
+@function sf-strip-invalid-char( $string ) {
+  $index-dot : 0;
+  $new-string: "";
+  $string: "#{$string}"; // forcing to make it a string
+
+  @for $i from 1 through str-length($string) {
+    $character: str-slice($string, $i, $i);
+
+   // create a new string without the illegal char.
+    @if $character == "." {
+        $index-dot: $i;
+    } @else if $character == "%" {
+        $index-dot: $i;
+    } @else if $character == ":" {
+        $index-dot: $i;
+    } @else {
+      $new-string: $new-string + $character;
+    }
+  }
+  // return new string
+  @if $index-dot {
+     @return $new-string;
+  } @else {
+     @warn "String: #{$string} doesn't have any illegal character(s).";
+  }
+}

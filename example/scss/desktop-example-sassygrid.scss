@@ -1,0 +1,206 @@
+@import "bourbon/dist/bourbon";
+@import "variables";
+@import "neat/app/assets/stylesheets/neat";
+@import "typography";
+@import "SassyGrid";
+
+
+
+header {
+    h1 {
+        // float: left;
+        @include sf-cache((float: left));
+    }
+
+    .source {
+        // float: right;
+        @include sf-cache((float: right));
+    }
+}
+
+section {
+    @include sf-grid-outer-container;
+    @include sf-cache((
+        text-align: center,
+        margin-bottom: 3em,
+    ));
+
+    & > code, code.block {
+        @include sf-cache((display: block));
+    }
+
+    div {
+        @include sf-cache((
+            height: $body-line-height*4,
+            line-height: $body-line-height,
+            text-align: left,
+            padding: 1em,
+        ));
+    }
+
+    &.zero {
+        div {
+            @include sf-grid-col(6);
+            @include sf-cache((height: 20em));
+        }
+    }
+
+    &.first {
+        div#alpha {
+            @include sf-grid-col(1);
+        }
+
+        div#beta {
+            @include sf-grid-col(11);
+        }
+
+        div#gamma {
+            @include sf-grid-col(2);
+        }
+
+        div#delta {
+             @include sf-grid-col(10);
+        }
+
+        div#epsilon {
+            @include sf-grid-col(3);
+        }
+
+        div#zeta {
+            @include sf-grid-col(9);
+        }
+
+        div#eta {
+            @include sf-grid-col(4);
+        }
+
+        div#theta {
+            @include sf-grid-col(8);
+        }
+
+        div#iota {
+            @include sf-grid-col(5);
+        }
+
+        div#kappa {
+            @include sf-grid-col(7);
+        }
+
+        div#lambda {
+            @include sf-grid-col(6);
+        }
+
+        div#mu {
+            @include sf-grid-col(6);
+        }
+
+        div#beta, div#delta, div#zeta, div#theta, div#kappa, div#mu {
+            @include sf-grid-omega;
+        }
+  }
+
+  &.second {
+    div {
+        @include sf-cache((height: 20em));
+
+        &#alpha {
+            @include sf-grid-col(4);
+        }
+
+    &#beta {
+        @include sf-cache((
+            padding: 0,
+            line-height: $body-line-height*2,
+            text-align: center,
+        ));
+        @include sf-grid-col(8);
+
+        aside {
+            @include sf-grid-col(4 of 8);
+            @include sf-cache((
+                border: none,
+                height: 84%,
+                padding: 1em,
+            ));
+        }
+
+        article {
+          @include sf-grid-col(4 of 8);
+          height: 84%;
+          padding: 1em;
+        }
+      }
+    }
+  }
+
+  &.third {
+    div#dummy {
+        @include sf-cache((
+            border-bottom: 0,
+            height: 5.5em,
+            text-align: center
+        ));
+    }
+
+    div#alpha {
+      @include sf-grid-col(12);
+      @include sf-grid-row(table);
+      @include sf-cache((
+          margin-bottom: 0,
+          padding: 0,
+      ));
+
+    aside {
+        @include sf-grid-col(4);
+        @include sf-grid-pad();
+        @include sf-cache(( border-right: 1px solid rgba(255,255,255, 0.5) ));
+    }
+
+    article {
+        @include sf-cache((height: 20em));
+        @include sf-grid-col(8);
+        @include reset-display;
+        @include sf-grid-pad();
+      }
+    }
+  }
+
+    &.fourth {
+        div.one-column {
+            @include sf-grid-col(1);
+
+            &.last {
+                @include sf-grid-omega();
+            }
+        }
+
+    div#alpha {
+        @include sf-grid-col(6);
+        @include shift(3);
+        @include sf-cache((
+            height: 20em,
+            text-align: center,
+        ));
+    }
+  }
+
+    &.fifth {
+        div.box {
+            @include sf-cache((
+                font-size: 0.78em,
+                height: 8em,
+            ));
+            // margin-top: 2em;
+            @include sf-grid-col(3);
+            @include sf-grid-omega(4n);
+        }
+    }
+}
+
+div.code {
+    @include outer-container();
+    @include sf-cache((
+        padding:0.5em,
+        text-align: center,
+    ));
+}

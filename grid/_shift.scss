@@ -1,0 +1,11 @@
+@mixin sf-grid-shift($n-columns: 1){
+    $name: "sf-grid-shift-#{$n-columns}";
+
+    @if (sf-placeholder-exists($name) == false){
+        @include sf-add-p($name){
+            @include shift($n-columns);
+        }
+    }
+
+    @include sf-use-p($name);
+}
