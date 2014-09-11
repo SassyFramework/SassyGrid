@@ -16,7 +16,7 @@ body:before {
   height: 100%;
   left: 0;
   margin: 0 auto;
-  max-width: em(1024);
+  max-width: 64em;
   opacity: 0.4;
   position: fixed;
   right: 0;
@@ -252,7 +252,7 @@ header:after {
   clear: both;
 }
 header .wrapper {
-  max-width: em(1024);
+  max-width: 64em;
   margin-left: auto;
   margin-right: auto;
 }

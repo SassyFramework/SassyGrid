@@ -17,7 +17,7 @@ header .source {
 }
 
 section {
-  max-width: em(1024);
+  max-width: 64em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -284,7 +284,7 @@ section.fifth div.box:nth-child(4n+1) {
 }
 
 div.code {
-  max-width: em(1024);
+  max-width: 64em;
   margin-left: auto;
   margin-right: auto;
   padding: 0.5em;

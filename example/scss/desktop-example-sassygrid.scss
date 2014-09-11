@@ -2,7 +2,12 @@
 @import "variables";
 @import "neat/app/assets/stylesheets/neat";
 @import "typography";
-@import "SassyGrid";
+
+@import "sassybreakpoint/SassyBreakpoint";
+@import "sassyplaceholder/SassyPlaceholder";
+@import "sassycache/SassyCache";
+
+@import "../../SassyGrid";
 
 
 

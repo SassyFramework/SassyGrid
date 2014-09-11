@@ -1,7 +1,5 @@
-
-
+@import "bourbon/dist/bourbon";
 @import "variables";
-
 $visual-grid: true;
 $visual-grid-color: #E6F6FF;
 $visual-grid-opacity: 0.4;
@@ -10,9 +8,7 @@ $midblue: #AADBF5;
 $dkblue: #41A8DF;
 $dkerblue: #298EC3;
 $textblue: #072f44;
-
-@import "../../SassyGrid";
-
+@import "neat/app/assets/stylesheets/neat";
 @import "typography";
 @import "reset";
 
