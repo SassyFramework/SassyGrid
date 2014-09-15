@@ -5,7 +5,7 @@
     "johngerome <johngerome@gmail.com>"
   ],
   "description": "An Optimize Responsive Grid System.",
-  "main": "_SassyGrid.scss",
+  "main": "_sassy-grid.scss",
   "keywords": [
     "sass",
     "sassy",
@@ -23,8 +23,7 @@
     "tests"
   ],
   "devDependencies": {
-    "sassyplaceholder": "~0.0.2",
-    "sassybreakpoint": "~0.0.1",
+    "sassycache": "~0.0.1",
     "neat": "~1.6.0",
     "bourbon": "~4.0.2"
   }

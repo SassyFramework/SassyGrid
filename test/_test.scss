@@ -1,11 +1,12 @@
 // bower components
 @import "bourbon/dist/bourbon";
 @import "neat/app/assets/stylesheets/neat";
-@import "sassybreakpoint/SassyBreakpoint";
-@import "sassyplaceholder/SassyPlaceholder";
-@import "sassycache/SassyCache";
 
-@import "../SassyGrid";
+@import "sassybreakpoint/sassy-breakpoint";
+@import "sassyplaceholder/sassy-placeholder";
+@import "sassycache/sassy-cache";
+
+@import "../sassy-grid";
 
 /**
  *  Expected Output:
