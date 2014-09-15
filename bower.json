@@ -22,9 +22,11 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "sassycache": "~0.0.1",
+  "dependencies": {
+    "sassybreakpoint": "~0.0.2",
+    "sassyplaceholder": "~0.0.1",
+    "bourbon": "~4.0.2",
     "neat": "~1.6.0",
-    "bourbon": "~4.0.2"
+    "sassycache": "~0.0.1"
   }
 }
